@@ -1,4 +1,408 @@
-.left   .right {
-    background-color: red;
-    border: 1px solid black;
+body {
+    font-family: 'Silkscreen',sans-serif;
+    margin:0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+
+.left  {
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #5aa0d7;
+    
+    width: 35vw;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+  margin: 0;
+  padding: 0;
+    
+    justify-content: space-between;
+}
+
+.banner {
+    
+
+    
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+    color: #fff;
+    
+    
+    width: 35vw;
+    height: 8rem;
+    
+    
+    background:rgba(0, 0, 0, .6);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.top {
+    display: flex;
+    color: white;
+    flex: 1;
+    background-color: #5aa0d7
+   
+    
+}
+.wave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.middle {
+    display: flex;
+    color: #fff;
+    background-color: #5aa0d7;
+    flex: 1;
+
+   justify-content: space-around;
+   align-items: center;
+
+}
+.midleft, .midright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+    
+    
+}
+
+.bottom {
+    display: flex;
+    position: relative;
+    
+    justify-content: space-around;
+    align-items: flex-end;
+    flex: 1;
+    background-color: #5aa0d7;
+
+}
+
+input {
+    min-height: 20px;
+}
+
+button {
+    position: relative;
+    top: -100px;
+    left: -100px;
+    
+    height: 50px;
+    width: 150px;
+}
+
+.cloud {
+    position: relative;
+    top: 150px;
+    width:320px;
+    height: 100px;
+    background: var(--cloudColor);
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius: 100px;
+    animation: movingCloud 10s linear infinite;
+    animation-duration: 30s;
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 120px;
+    height: 110px;
+    background: var(--cloudColor);
+    border-radius: 50%;
+    box-shadow: 90px 0 0 30px var(--cloudColor);
+}
+
+.rain {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 2px;
+    animation: movingCloud 10s linear infinite;
+    animation-duration: 30s;
+}
+
+.rain span {
+    position: relative;
+    bottom: -100px;
+    width: 10px;
+    height: 10px;
+    background: rgb(165, 232, 235);
+    margin: 0 2px;
+    border-radius: 50%;
+    
+    animation: animates 100s linear infinite;
+animation-duration: calc(15s/var(--i));
+}
+
+@keyframes animates
+{
+    0%
+    {
+        transform: translateY(0)scale(1);
+    }
+     70%
+    {
+        transform: translateY(400px)scale(1);
+    }
+     100%
+    {
+        transform: translateY(360px)scale(0);
+    }
+}
+
+.cloud2 {
+    position: relative;
+    left: 330px;
+    top: -100px;
+    width:350px;
+    height: 100px;
+    background: #fff;
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius: 100px;
+    animation: movingCloud 10s linear infinite;
+    animation-duration: 30s;
+}
+
+.cloud2::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 120px;
+    height: 110px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 90px 0 0 30px #fff;
+}
+
+.rain2 {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 2px;
+    animation: movingCloud2 10s linear infinite;
+    animation-duration: 30s;
+    
+}
+
+.rain2 span {
+    position: relative;
+    left: 330px;
+    bottom: 100px;
+    width: 10px;
+    height: 10px;
+    background: #a5e8eb;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    animation-duration: calc(20s/var(--i));
+    
+}
+.cloud2 {
+    position: relative;
+    left: 330px;
+    top: -100px;
+    width:350px;
+    height: 100px;
+    background: var(--cloudColor);
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius: 100px;
+    animation: movingCloud2 10s linear infinite;
+    animation-duration: 30s;
+}
+
+.cloud2::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    width: 120px;
+    height: 110px;
+    background: var(--cloudColor);
+    border-radius: 50%;
+    box-shadow: 90px 0 0 30px var(--cloudColor);
+}
+
+
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0)scale(1);
+    }
+     70%
+    {
+        transform: translateY(600px)scale(1);
+    }
+     100%
+    {
+        transform: translateY(580px)scale(0);
+    }
+}
+
+@keyframes movingCloud
+{
+    0%
+    {
+        transform: translateY(0px)scale(1);
+        
+    }
+    15%
+    {
+        transform: translateX(200px)scale(1)
+    }
+    25%
+    {
+        transform: translateX(400px)scale(1);
+    }
+    50%
+    {
+        transform: translateX(600px)scale(1);
+    }
+    75%
+    {
+        transform: translateX(200px)scale(1);
+    }
+     100%
+    {
+        transform: translateX(0px)scale(1);
+    }
+
+    
+
+
+
+
+}
+
+@keyframes movingCloud2
+{
+    0%
+    {
+        transform: translateX(1000px)scale(1);
+        
+    }
+    15%
+    {
+        transform: translateX(800px)scale(1)
+    }
+    25%
+    {
+        transform: translateX(700px)scale(1);
+    }
+    50%
+    {
+        transform: translateX(500px)scale(1);
+    }
+    75%
+    {
+        transform: translateX(200px)scale(1);
+    }
+     100%
+    {
+        transform: translateX(1000px)scale(1);
+    }
+}
+
+.pole {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 100px;
+    border-radius: 10px 10px 10px 10px;
+    bottom: -100px;
+    width: 20px;
+    z-index: 1;
+    background-image: var(--dayPole);
+    background-color: rgb(63, 52, 52);
+    
+     border: 2px solid rgb(60, 56, 56);
+     height: 400px;
+}
+
+.pole::before {
+    
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    
+    transform: skew(0,5deg);
+    top: -10px;
+    left: -3px;
+    height: 30px;
+    width: 150px;
+    z-index: 1;
+    content: '';
+    
+    background: var(--dayPoleTop);
+    background-color: rgb(79, 66, 66);
+   
+    
+    
+}
+
+.pole::after {
+    content: '';
+    position: relative;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background-color: var(--lightOn);
+    left: 79px;
+    top: -18px;
+    height: 20px;
+    width: 60px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: var(--darkmode);
+    transform:rotate(5deg) skew(10deg);
+    
+    
+    
+}
+
+.grass {
+    position: relative;
+    bottom: -90px;
+    width: 100vw;
+    height: 10px;
+    z-index: 1;
+    background-color: rgb(84, 158, 84);
+}
+
+
+
+:root {
+    --lightOn: rgb(216, 203, 203);
+    --nightPole: linear-gradient(to left, rgb(201, 174, 174), rgb(99, 81, 81), rgb(52, 46, 46), rgb(36, 29, 29));
+    --nightPoleTop: radial-gradient(ellipse at 80px 80px,  rgb(60, 46, 46), rgb(192, 162, 162), rgb(104, 99, 99), rgb(66, 53, 53));
+    --dayPole: linear-gradient(to left,  rgb(41, 35, 35), rgb(102, 94, 94), rgb(184, 179, 179), rgb(100, 95, 95));
+    --dayPoleTop: linear-gradient(to top,  rgb(41, 35, 35), rgb(102, 94, 94), rgb(184, 179, 179), rgb(100, 95, 95));
+    --cloudColor: #fff;
+    --darkmode: #00000;
 }
