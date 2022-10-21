@@ -73,8 +73,7 @@
       <div class="top">
         
         <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsam
-          repellendus, reprehenderit maiores blan
+          Hold down mouse click for slow mo rain
         </h2>
         
       </div>
@@ -84,39 +83,39 @@
         <div class="midleft">
         <div class="name">
          <label for="first_name">First Name</label><br>
-         <input type="text" name="first_name" id="first_name">
+         <input type="text" name="first_name" id="first_name" minlength="3" maxlength="12" required>
        
         </div>
         <div class="email">
             <label for="first_name">Email</label><br>
-         <input type="text" name="email" id="email">
-        
+         <input type="email" name="email" id="email"minlength="3" maxlength="12" placeholder="blahblah@blah.com" required>
+        <span></span>
         </div>
         <div class="password">
             <label for="password">password</label><br>
-         <input type="text" name="password" id="password">
-
+         <input type="password" name="password" id="password" minlength="3" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Must contain 1 uppercase and a number" required>
+          <span></span>
         </div>
         </div>
         <div class="midright">
             <div class="lastname">
             <label for="last_name">Last Name</label><br>
-         <input type="text" name="last_name" id="last_name">
+         <input type="text" name="last_name" id="last_name"minlength="3" maxlength="12">
         </div>
         <div class="number">
          <label for="number">Number</label><br>
-         <input type="text" name="number" id="number">   
+         <input type="text" name="number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="number" minlength="7" maxlength="12" title="Please enter a valid number, example: 123-456-7890"  placeholder="###-###-####" >   
         </div>
         <div class="confirm-password">
              <label for="confirm-password">confirm password</label><br>
-         <input type="text" name="confirm-password" id="confirm-password">   
-
+         <input type="password" name="confirm-password" id="confirm-password"minlength="3" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Must contain 1 uppercase and a number" required>>   
+          <span></span>
         </div>
         </div>
         
       </div>
       <div class="bottom">
-        <button class="createAccount">hello</button>
+        <button type = "submit" class="createAccount">Sign up</button>
         <button class="rain-toggle">Toggle rain</button>
         <button class="darkmode">Dark mode</button>
       </div>

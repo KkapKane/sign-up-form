@@ -1,6 +1,13 @@
 const spans = document.querySelectorAll('span');
 const rainbtn = document.querySelector('.rain-toggle')
 const cloud = document.querySelector('.cloud');
+const pwText = document.querySelector('#password')
+const pwConfirm = document.querySelector("#confirm-password");
+const signupBtn = document.querySelector('.createAccount')
+const emailText = document.querySelector('#email')
+const firstName = document.querySelector('#first_name')
+const lastName = document.querySelector('#last_name')
+const phoneNum = document.querySelector('#number')
 var rainOn = false;
 
 var opacityLvl = 1;
@@ -15,6 +22,20 @@ topside = document.querySelector('.top')
 botside = document.querySelector(".bottom");
 middle = document.querySelector(".middle");
 
+
+
+// comparing password text box 1 and 2
+function comparePw(password1, password2) {
+    if (password1 === password2) {
+        
+        return true;
+    }
+    else
+        alert('password does not match')
+        return false;
+}
+
+// sets the speed of rain or just stops it
 function slowdown(element) {
 element.style.animationDuration = "calc(+" + speed +"s/var(--i))";
 }
@@ -23,29 +44,33 @@ function changeOpacity(element) {
     element.style.opacity = opacityLvl
 }
 
+
+//make background dark
 function darkMode(element) {
     
     element.style.backgroundColor = darkmodeColor;
     
     
 }
-
+// make background color light
 function lightMode(element) {
     element.style.backgroundColor = lightmodeColor;   
 }
 
 
-
-
+//rain speed set back to normal on mouse up
 document.querySelector('body').addEventListener('mouseup', (e) => {
     speed = 15;
     spans.forEach(slowdown)
 })
+
+// sets speed of rain to slow mo if mouse is down
 document.querySelector("body").addEventListener("mousedown", (e) => {
   speed = 100;
   spans.forEach(slowdown);
 });
 
+//listen to rain toggle button to 
 document.querySelector(".rain-toggle").addEventListener("click", (e) => {
     if (rainOn == true) {
         speed = 15;
@@ -126,4 +151,22 @@ document.querySelector(".darkmode").addEventListener('click', (e) => {
         isDark = false;
     }
 });
-
+let password1 = 'hi'
+let password2 = 'hi3'
+document.querySelector('.createAccount').addEventListener('click', (e) => {
+    password1 = pwText.value;
+    password2 = pwConfirm.value;
+    console.log(emailText.value)
+    comparePw(password1, password2)
+    if (comparePw(password1,password2) == true) {
+        alert('Sign up complete');
+        
+        
+    }
+    else if (emptyText() == false) {
+        console.log('enter something')
+    }
+    else 
+        
+        alert('failed log in')
+})
