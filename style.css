@@ -358,7 +358,7 @@ animation-duration: calc(15s/var(--i));
     position: relative;
     bottom: -80px;
     width: 100vw;
-    height: 10px;
+    height: 20px;
     z-index: 1;
     background-color: rgb(84, 158, 84);
 }
