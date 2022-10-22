@@ -15,7 +15,7 @@ html {
 
 .main {
     display: flex;
-    overflow: hidden;
+   
     min-height: 100%;
     width: 100%;
 
@@ -32,7 +32,7 @@ body {
     display: flex;
     
     box-sizing: border-box;
-   overflow: hidden;
+ 
     overflow-x: hidden;
     }
 
